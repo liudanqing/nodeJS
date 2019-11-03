@@ -83,11 +83,11 @@ http.createServer(function(req,res) {
         var pt = path.join(__dirname,'../list.html');
         showPage(res,pt);
 
-    } else if(pathName == '/addChapter') {
+    } else if(pathName == '/addChapter' && req.method== 'GET') {
         var pt = path.join(__dirname,'../addChapter.html');
         showPage(res,pt);
 
-    } else if(pathName == '/submit') {
+    } else if(pathName == '/addChapter' && req.method== 'POST') {
         var dataStr = "";
         req.on('data',function(chunk) {
             dataStr += chunk;
