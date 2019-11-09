@@ -4,7 +4,7 @@ var data = require('../data.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('login', { title: 'Express' });
+  res.render('login');
 });
 
 router.post('/list', function(req, res, next) {
